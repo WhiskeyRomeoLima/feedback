@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <title>Title</title>
+  </head>
+
+  <body>
+    <div id="parent">
+      <button id="child">Click me</button>
+    </div>
+
+    <script>
+      function handleClick(event) {
+        console.log('event.target:', event.target.id)
+        console.log('event.currentTarget:', event.currentTarget.id)
+      }
+
+      const parent = document.getElementById('parent')
+      const child = document.getElementById('child')
+
+      parent.addEventListener('click', (event) => {
+        console.log('parent listener')
+        handleClick(event)
+      })
+      child.addEventListener('click', (event) => {
+        console.log('child listener')
+        handleClick(event)
+      })
+    </script>
+  </body>
+</html>
