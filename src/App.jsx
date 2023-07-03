@@ -9,7 +9,6 @@ import {FeedbackProvider} from './components/context/FeedbackContext'
 
 /*In lesson 6-1 Create a Context and Provider we remove state from individual components
 and centralized access to state via Context.
-
 We wrap all components needing access to the context with the provider component of FeedbackContext
 
 */

@@ -8,10 +8,8 @@ function FeedbackStats() { //removed feedback prop
  let average =
   feedback.length === 0
     ? 0
-    : feedback.reduce((acc,  cur ) => { 
-      console.log(`acc: ${acc} cur: ${cur}`);
-      return acc + cur.rating, 0 / feedback.length
-    })
+    : feedback.reduce((acc,  cur ) => 
+       acc + cur.rating, 0) / feedback.length
 
     return (
       <div className='feedback-stats'>
